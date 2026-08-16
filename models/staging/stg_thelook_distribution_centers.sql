@@ -7,7 +7,8 @@ renamed as (
         id as distribution_center_id,
         name as distribution_center_name,
         latitude,
-        longitude
+        longitude,
+        distribution_center_geom
     from source
 )
 
