@@ -1,5 +1,5 @@
 select
-    u.id as customer_id,
+    u.user_id as customer_id,  
     u.first_name,
     u.last_name,
     u.email,
@@ -15,4 +15,4 @@ select
     s.most_recent_order_at
 from {{ ref('stg_thelook_users') }} u
 left join {{ ref('int_user_order_summary') }} s
-    on u.id = s.user_id
+    on u.user_id = s.user_id   
