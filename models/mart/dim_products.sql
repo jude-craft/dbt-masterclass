@@ -1,6 +1,6 @@
 select
-    id as product_id,
-    name as product_name,
+    product_id,
+    product_name,  
     brand,
     category,
     department,
