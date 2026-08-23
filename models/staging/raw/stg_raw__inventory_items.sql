@@ -1,10 +1,15 @@
-with source as (
-        select * from {{ source('thelook_ecommerce', 'inventory_items') }}
+with 
+
+source as (
+
+    select * from {{ source('raw', 'inventory_items') }}
+
 ),
 
 renamed as (
+
     select
-        id as inventory_item_id,
+        id,
         product_id,
         created_at,
         sold_at,
@@ -16,7 +21,9 @@ renamed as (
         product_department,
         product_sku,
         product_distribution_center_id
+
     from source
+
 )
 
 select * from renamed

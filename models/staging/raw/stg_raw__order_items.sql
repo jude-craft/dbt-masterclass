@@ -1,10 +1,15 @@
-with source as (
-    select * from {{ source('thelook_ecommerce', 'order_items') }}
+with 
+
+source as (
+
+    select * from {{ source('raw', 'order_items') }}
+
 ),
 
 renamed as (
+
     select
-        id as order_item_id,
+        id,
         order_id,
         user_id,
         product_id,
@@ -15,7 +20,9 @@ renamed as (
         delivered_at,
         returned_at,
         sale_price
+
     from source
+
 )
 
 select * from renamed

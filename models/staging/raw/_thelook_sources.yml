@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: raw
+    database: bigquery-public-data
+    schema: thelook_ecommerce
+    description: "Synthetic e-commerce dataset (BigQuery)"
+
+    tables:
+      - name: users
+        description: "One row per customer"
+
+      - name: orders
+        description: "One row per order"
+
+      - name: order_items
+        description: "One row per order line item"
+
+      - name: products
+        description: "Product catalog"
+
+      - name: inventory_items
+        description: "Unit-level inventory"
+
+      - name: distribution_centers
+        description: "Fulfillment locations"
+
+      - name: events
+        description: "Clickstream session events"
