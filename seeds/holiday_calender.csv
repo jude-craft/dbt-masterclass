@@ -1,0 +1,5 @@
+holiday_date,holiday_name,country,is_shopping_peak
+2023-01-01,New Year's Day,US,false
+2023-11-24,Black Friday,US,true
+2023-11-27,Cyber Monday,US,true
+2023-12-25,Christmas Day,US,false
