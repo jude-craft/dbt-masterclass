@@ -1,0 +1,21 @@
+version: 2
+
+seeds:
+  - name: traffic_source_channel
+    description: >
+      Maps raw traffic_source values to broader paid/organic channel grouping
+      for the seed.
+    columns:
+      - name: traffic_source
+        description: These are the unique values from our traffic_source column
+        data_tests:
+          - unique
+          - not_null
+
+      - name: channel_group
+        description: Assigned channel group
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Paid', 'Organic']

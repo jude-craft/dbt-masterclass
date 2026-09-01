@@ -1,0 +1,12 @@
+snapshots:
+  - name: users_snapshots
+    relation: source('raw', 'users')
+    description: >
+      Track all changes of users over time
+    config:
+      schema: snapshots
+      unique_key: id
+      strategy: check
+      check_cols:
+        - street_address
+        - postal_code
